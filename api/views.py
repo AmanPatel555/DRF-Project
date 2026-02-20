@@ -1,10 +1,11 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from teachers.models import Teacher
-from .serializers import TeacherSerializer,StudentSerializer
+from .serializers import TeacherSerializer,StudentSerializer, MentorSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from student.models import Student
+from mentor.models import Mentor
 from rest_framework.decorators import api_view
 from rest_framework.views import APIView
 from django.http import Http404
@@ -137,3 +138,10 @@ class StudentDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Student.objects.all()    
     serializer_class = StudentSerializer
 
+class MentorView(generics.ListAPIView, generics.ListCreateAPIView):
+    queryset = Mentor.objects.all()    
+    serializer_class = MentorSerializer
+
+class MentorDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Mentor.objects.all()    
+    serializer_class = MentorSerializer

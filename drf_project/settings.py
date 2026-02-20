@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'teachers',
     'api',
-    'student'
+    'student',
+    'mentor',
 ]
 
 MIDDLEWARE = [
