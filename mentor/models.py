@@ -5,5 +5,6 @@ class Mentor(models.Model):
     mentor_name = models.CharField(max_length=100)
     mentor_email = models.EmailField(unique=True)
     
+    
     def __str__(self):
         return self.mentor_name

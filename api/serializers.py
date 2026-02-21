@@ -8,6 +8,7 @@ class TeacherSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 class StudentSerializer(serializers.ModelSerializer):
+    #mentor = serializers.SlugRelatedField(slug_field='name', queryset=Mentor.objects.all()) # This will show the mentor name instead of the mentor id
     class Meta:
         model = Student
         fields = '__all__'
