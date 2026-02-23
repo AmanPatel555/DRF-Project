@@ -145,3 +145,4 @@ class MentorView(generics.ListAPIView, generics.ListCreateAPIView):
 class MentorDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Mentor.objects.all()    
     serializer_class = MentorSerializer
+
